@@ -1,0 +1,70 @@
+<DOCTYPE! html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <script>
+    const value = ['rock', 'paper', 'scissors']
+    let lose = "You lose!"
+    let win = "You win!"
+    let draw = "It's a draw!!"
+      function computer() {
+        choice = value[Math.floor(Math.random() * value.length)];
+        return choice;
+      }
+
+      function play(player_selection, computer_selection){
+        player_selection = prompt("rock, paper, scissors?");
+        computer_selection = computer();
+        console.log(computer_selection);
+        if (player_selection == computer_selection) {
+          return draw;
+        }
+        else if (player_selection == "rock" && computer_selection == "paper") {
+          return lose;
+        }
+        else if (player_selection == "rock" && computer_selection == "scissors") {
+          return win;
+        }
+        else if (player_selection == "paper" && computer_selection == "scissors") {
+          return lose;
+        }
+        else if (player_selection == "paper" && computer_selection == "rock") {
+          return win;
+        }
+        else if (player_selection == "scissors" && computer_selection == "rock") {
+          return lose;
+        }
+        else if (player_selection == "scissors" && computer_selection == "paper") {
+          return win;
+        }
+        else {
+          return "Error!!!"
+        }
+      }
+
+      function game() {
+        let human = 0;
+        let computer = 0;
+        round =0;
+        while(round < 5) {
+          result = play();
+          if (result == lose) {
+            computer++, round++
+          }
+          else if (result == win) {
+            human++, round++
+          }
+        }
+        if (human > computer) {
+          return "You win the game!!!  " + human + ' - ' + computer;
+        }
+        else {
+            return "You lose the game!!!  " + human + ' - ' + computer;
+        }
+      }
+      console.log(game());
+    </script>
+  </body>
+</html>
