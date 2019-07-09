@@ -1,0 +1,110 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.active-button {
+  transform: scale(1.1);
+  transition: all 1s;
+}
+
+img {
+  max-width: 100%
+}
+
+
+.main-container {
+  position: absolute;
+  width: 100%;
+}
+
+.welcome {
+  position: relative;
+  text-align: center;
+  top: 15px;
+}
+
+.player {
+  width: 128px;
+  height: 128px;
+}
+
+.robot {
+  width: 128px;
+  height: 128px;
+}
+
+.container section {
+  display: inline-block;
+}
+
+.playground div {
+  display: inline-block;
+  margin: 10px;
+}
+
+.human {
+  position: relative;
+  top: 50px;
+  text-align: center;
+  left: 15%;
+  float: left;
+}
+
+.human h2 {
+  position: relative;
+
+}
+
+.vertical-line {
+  border-right: 2px solid gray;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 50;
+}
+
+.computer {
+  position: relative;
+  top: 50px;
+  text-align: center;
+  right: 15%;
+  float: right;
+}
+
+.computer h2 {
+  position: relative;
+  bottom: 10px;
+}
+
+.rock {
+  height: 100px;
+  width: 100px
+}
+
+.paper {
+
+  height: 100px;
+  width: 100px;
+}
+
+.scissors {
+  height: 100px;
+  width: 100px;
+}
+
+.score-board {
+  position: relative;
+  border: 4px solid black;
+  height: 100px;
+  width: 100px;
+  top: 5px;
+  left: 35%;
+}
+
+.score-board span {
+  line-height: 100px;
+  font-size: 200%
+}

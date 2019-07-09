@@ -2,69 +2,59 @@
 <html>
   <head>
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css" />
   </head>
   <body>
-    <script>
-    const value = ['rock', 'paper', 'scissors']
-    let lose = "You lose!"
-    let win = "You win!"
-    let draw = "It's a draw!!"
-      function computer() {
-        choice = value[Math.floor(Math.random() * value.length)];
-        return choice;
-      }
-
-      function play(player_selection, computer_selection){
-        player_selection = prompt("rock, paper, scissors?");
-        computer_selection = computer();
-        console.log(computer_selection);
-        if (player_selection == computer_selection) {
-          return draw;
-        }
-        else if (player_selection == "rock" && computer_selection == "paper") {
-          return lose;
-        }
-        else if (player_selection == "rock" && computer_selection == "scissors") {
-          return win;
-        }
-        else if (player_selection == "paper" && computer_selection == "scissors") {
-          return lose;
-        }
-        else if (player_selection == "paper" && computer_selection == "rock") {
-          return win;
-        }
-        else if (player_selection == "scissors" && computer_selection == "rock") {
-          return lose;
-        }
-        else if (player_selection == "scissors" && computer_selection == "paper") {
-          return win;
-        }
-        else {
-          return "Error!!!"
-        }
-      }
-
-      function game() {
-        let human = 0;
-        let computer = 0;
-        round =0;
-        while(round < 5) {
-          result = play();
-          if (result == lose) {
-            computer++, round++
-          }
-          else if (result == win) {
-            human++, round++
-          }
-        }
-        if (human > computer) {
-          return "You win the game!!!  " + human + ' - ' + computer;
-        }
-        else {
-            return "You lose the game!!!  " + human + ' - ' + computer;
-        }
-      }
-      console.log(game());
-    </script>
+    <div class='main-container'>
+      <div class="welcome">
+        <h1>Rock Paper Scissors</h1>
+      </div>
+      <div class="container">
+        <section class="human">
+          <h2>Player</h2>
+          <img src="images/user.png" class="player" />
+        <div class="playground">
+        <div class="rock">
+          <button id='Rock'><img src="images/rock.png" /></button>
+          <h4>Rock</h4>
+        </div>
+        <div class="paper">
+          <button id='Paper'><img src='images/paper.png' /></button>
+          <h4>Paper</h4>
+        </div>
+        <div class="scissors">
+          <button id='Scissors'><img src='images/scissors.png' /></button>
+          <h4>Scissors</h4>
+        </div>
+      </div>
+      <div class="score-board">
+        <span id="humanScore">0</span>
+      </div>
+    </section>
+    <div class='vertical-line'></div>
+    <section class="computer">
+      <h2>Computer</h2>
+      <img src="images/robot.png" class="robot" />
+      <div class="playground">
+        <div class="rock">
+          <img id='rockCom' src="images/rock.png" />
+          <h4>Rock</h4>
+        </div>
+        <div class="paper">
+          <img id='paperCom'src='images/paper.png' />
+          <h4>Paper</h4>
+        </div>
+        <div class="scissors">
+          <img id='scissorsCom' src='images/scissors.png' />
+          <h4>Scissors</h4>
+        </div>
+      </div>
+      <div class="score-board">
+        <span id="computerScore">0</span>
+      </div>
+    </section>
+    </div>
+  </div>
+  <script src="Js/script.js"></script>
   </body>
 </html>
