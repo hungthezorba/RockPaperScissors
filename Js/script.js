@@ -48,10 +48,10 @@ function checkScore() {
     rockBtn.disabled = true;
     paperBtn.disabled = true;
     scissorsBtn.disabled = true;
-    announcement('you');
+    announcement('You');
   }
   else if (computer_score == 5) {
-    announcement('computer')
+    announcement('Computer')
     rockBtn.disabled = true;
     paperBtn.disabled = true;
     scissorsBtn.disabled = true;
@@ -69,5 +69,5 @@ function removeTransform(e) {
 }
 
 function announcement(winner) {
-  document.getElementById('result').textContent = winner + ' win'
+  document.getElementById('resultText').textContent = winner + ' win'
 }

@@ -1,165 +1,99 @@
-*{
+/*Global*/
+
+body {
+  font-family: sans-serif, serif, arial;
   margin: 0;
   padding: 0;
   border: 0;
-  font-family: sans-serif;
-  font-size: 20px;
-}
-
-h1 {
-  font-size: 35px;
-}
-
-ul li {
-  padding: 5px;
-  vertical-align: center;
-  list-style-position: inside;
-}
-
-h4 {
-  margin-top: 10px;
-}
-
-button {
-  outline: none;
-  background-color:inherit;
-}
-
-.active-button {
-  transform: scale(1.2);
-  transition: all 1.5s;
 }
 
 img {
   max-width: 95%;
-}
-
-
-.main-container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #fafafa;
-}
-
-.welcome {
-  position: relative;
-  text-align: center;
-  top: 15px;
-}
-
-.player {
   width: 128px;
-  height: 128px;
+  display: block;
 }
 
-.robot {
-  width: 128px;
-  height: 128px;
+button {
+  border-style: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
 }
 
-.container section {
-  display: inline-block;
+.container {
+  width: 85%;
+  margin: auto;
+  overflow: hidden;
 }
 
-.playground div {
-  display: inline-block;
-  margin: 10px;
-}
+/*Header*/
 
-.human {
-  position: relative;
-  top: 50px;
+header {
   text-align: center;
-  left: 15%;
+}
+
+/*Playground*/
+
+#playground {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.container #human {
   float: left;
+  margin-left: 2%;
 }
 
-.human h2 {
-  position: relative;
-
-}
-
-.vertical-line {
-  border-right: 2px solid gray;
-  height: 60%;
-  position: absolute;
-  left: 50%;
-  margin-left: -3px;
-  top: 70px;
-}
-
-.computer {
-  position: relative;
-  top: 50px;
+#human img{
   text-align: center;
-  right: 15%;
+  margin: 0 auto;
+}
+
+.container #computer {
   float: right;
+  margin-right: 2%;
 }
 
-.computer h2 {
-  position: relative;
-  bottom: 10px;
+#computer img{
+  text-align: center;
+  margin: 0 auto;
 }
 
-.rock {
-  height: 100px;
-  width: 100px
-}
 
-.paper {
+.box {
 
-  height: 100px;
-  width: 100px;
-}
-
-.scissors {
-  height: 100px;
-  width: 100px;
+  margin: 10px 2px 0px 2px;
+  display: inline-block;
 }
 
 .score-board {
-  position: relative;
-  border: 4px solid black;
-  border-radius: 10px;
+  border: 2px solid black;
   height: 70px;
   width: 70px;
-  top: 10px;
-  left: 39%;
+  margin: 0 auto;
+  border-radius: 10px;
 }
 
 .score-board span {
   line-height: 70px;
-  font-size: 200%
+  font-size: 35px;
 }
 
-.rule span {
-  color: #863d3d;
-  position: relative;
-  left: 3%;
-}
+/*Result*/
 
-.rule {
-  position: relative;
-  top: 570px;
-  width: 85%;
-  left: 15%;
-}
-
-.result {
-  position: absolute;
-  margin-top: 50px;
-  border: 4px solid gray;
-  height: 70px;
-  width: 20%;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.result p {
-  position: relative;
-  font-size: 150%;
+#result {
   text-align: center;
-  top: 15px;
+}
+
+#result .container {
+  margin-bottom: 50px;
+  border-bottom: 2px solid gray;
+  height: 50px;
+  width: 20%;
+}
+
+/*Animation*/
+.active-button {
+  transform: scale(1.2);
+  transition: all 1.5s;
 }

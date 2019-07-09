@@ -1,71 +1,66 @@
-<DOCTYPE! html>
+<DOCTYPE! hmtl>
 <html>
   <head>
-    <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" type="text/css" href="CSS/styles.css" />
+    <link rel='stylesheet' type='text/css' href='CSS/styles.css' />
   </head>
   <body>
-    <div class='main-container'>
-      <div class="welcome">
-        <h1>Rock Paper Scissors</h1>
+    <header>
+      <div class='container'>
+        <h1>ROCK PAPER SCISSORS</h1>
       </div>
-      <div class="container">
-        <section class="human">
-          <h2>Player</h2>
-          <img src="images/user.png" class="player" />
-        <div class="playground">
-        <div class="rock">
-          <button id='Rock'><img src="images/rock.png" /></button>
-          <h4>Rock</h4>
+    </header>
+    <section id='playground'>
+      <div class='container'>
+        <div id='human'>
+            <h3>Player</h3>
+            <img src='images/user.png' />
+          <div class='box'>
+            <button id='Rock'><img src='images/rock.png' /></button>
+            <h4>Rock</h4>
+          </div>
+          <div class='box'>
+            <button id='Scissors'><img src='images/scissors.png' /></button>
+            <h4>Scissors</h4>
+          </div>
+          <div class='box'>
+            <button id='Paper'><img src='images/paper.png' /></button>
+            <h4>Paper</h4>
+          </div>
+          <div class='score-board'>
+            <span id='humanScore'>0</span>
+          </div>
         </div>
-        <div class="scissors">
-          <button id='Scissors'><img src='images/scissors.png' /></button>
-          <h4>Scissors</h4>
+        <div id='computer'>
+          <h3>Computer</h3>
+          <img src='images/robot.png' />
+          <div class='box'>
+            <img id='rockCom' src='images/rock.png'/>
+            <h4>Rock</h4>
+          </div>
+          <div class='box'>
+            <img id='scissorsCom'src='images/scissors.png'/>
+            <h4>Scissors</h4>
+          </div>
+          <div class='box'>
+            <img id='paperCom' src='images/paper.png'/>
+            <h4>Paper</h4>
+          </div>
+          <div class='score-board'>
+            <span id='computerScore'>0</span>
+          </div>
         </div>
-        <div class="paper">
-          <button id='Paper'><img src='images/paper.png' /></button>
-          <h4>Paper</h4>
-        </div>
-      </div>
-      <div class="score-board">
-        <span id="humanScore">0</span>
       </div>
     </section>
-    <div class='vertical-line'></div>
-    <section class="computer">
-      <h2>Computer</h2>
-      <img src="images/robot.png" class="robot" />
-      <div class="playground">
-        <div class="rock">
-          <img id='rockCom' src="images/rock.png" />
-          <h4>Rock</h4>
-        </div>
-        <div class="scissors">
-          <img id='scissorsCom' src='images/scissors.png' />
-          <h4>Scissors</h4>
-        </div>
-        <div class="paper">
-          <img id='paperCom'src='images/paper.png' />
-          <h4>Paper</h4>
-        </div>
-      </div>
-      <div class="score-board">
-        <span id="computerScore">0</span>
+    <section id='result'>
+      <div class='container'>
+        <h3 id='resultText'></h3>
       </div>
     </section>
-    </div>
-    <div class="result">
-      <p id='result'></p>
-    </div>
-    <div class="rule">
-      <span>Instruction for Noob</span>
-      <ul>
-        <li>Rock win against scissors</li>
-        <li>Scissors win against paper</li>
-        <li>Paper win against rock</li>
-      </ul>
-    </div>
-  </div>
-  <script src="Js/script.js"></script>
+    <footer>
+      <div>
+
+      </div>
+    </footer>
+  <script src='Js/script.js'></script>
   </body>
 </html>
