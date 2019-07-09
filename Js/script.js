@@ -45,14 +45,16 @@ scissorsBtn.addEventListener('click',function() {
 
 function checkScore() {
   if (human_score == 5) {
-    alert('you win');
     rockBtn.disabled = true;
     paperBtn.disabled = true;
     scissorsBtn.disabled = true;
-
+    announcement('you');
   }
   else if (computer_score == 5) {
-    alert('you lose');
+    announcement('computer')
+    rockBtn.disabled = true;
+    paperBtn.disabled = true;
+    scissorsBtn.disabled = true;
   }
 }
 
@@ -64,4 +66,8 @@ function buttonTransform(btn) {
 function removeTransform(e) {
   if (e.propertyName !== 'transform') return;
   this.classList.remove('active-button')
+}
+
+function announcement(winner) {
+  document.getElementById('result').textContent = winner + ' win'
 }
