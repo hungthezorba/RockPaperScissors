@@ -4,13 +4,21 @@
   border: 0;
 }
 
+h4 {
+  margin-top: 5px;
+}
+
+button {
+  outline: none;
+}
+
 .active-button {
   transform: scale(1.1);
-  transition: all 1s;
+  transition: all 1.4s;
 }
 
 img {
-  max-width: 100%
+  max-width: 95%
 }
 
 
@@ -98,13 +106,14 @@ img {
 .score-board {
   position: relative;
   border: 4px solid black;
-  height: 100px;
-  width: 100px;
-  top: 5px;
-  left: 35%;
+  border-radius: 10px;
+  height: 70px;
+  width: 70px;
+  top: 10px;
+  left: 39%;
 }
 
 .score-board span {
-  line-height: 100px;
+  line-height: 70px;
   font-size: 200%
 }
